@@ -4,15 +4,16 @@ import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 
 export default defineConfig({
-  plugins: [react()],
-  root: '.',  // Thư mục gốc của dự án
-  base: './',  // Đường dẫn tương đối
+  plugins: [
+    react()],
+  root: '.', 
+  base: './', 
   build: {
-    outDir: 'dist',  // Đường dẫn tới thư mục build
+    outDir: 'dist',  
     emptyOutDir: true,
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'index.html'),  // File đầu vào là 'index.html' nằm ngoài thư mục 'src'
+        main: resolve(__dirname, 'index.html'),  
       },
     },
   },
